@@ -12,6 +12,10 @@
   },
   "author": "Natalie Pendragon <natalie.pendragon@gmail.com> (http://natpen.github.io)",
   "license": "ISC",
+  "keywords": [
+    "path",
+    "environment"
+  ],
   "devDependencies": {
     "tap": "^1.4.1"
   }
