@@ -2,9 +2,17 @@ var t            = require('tap');
 var isPathMember = require('../is-path-member.js');
 var path         = require('path');
 
+var isWindows = process.platform === 'win32' ||
+	process.env.OSTYPE === 'cygwin' ||
+	process.env.OSTYPE === 'msys';
+
 t.test('setup', function (t) {
 
-	process.env.PATH = '/bar:/bin:/usr/sbin';
+	if (isWindows) {
+		process.env.PATH = 'C:\\bar' + path.delimiter + 'C:\\bin' + path.delimiter + 'C:\\usr\\sbin';
+	} else {
+		process.env.PATH = '/bar' + path.delimiter + '/bin' + path.delimiter + '/usr/sbin';
+	}
 	t.end();
 });
 

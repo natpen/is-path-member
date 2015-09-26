@@ -2,8 +2,6 @@
 
 Platform-agnostic check of whether a given path is a member of the PATH environment variable.
 
-WARNING: Not fully tested in Windows environments yet!
-
 ## USAGE
 
 ```javascript
@@ -22,7 +20,3 @@ var retVal = isPathMember.sync('/foo/bar/baz/');
 ## OPTIONS
 
 If you pass in options, then `colon` is relevant.
-
-## TODO
-
-Improve tests (especially for Windows environments)
